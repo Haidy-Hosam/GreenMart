@@ -65,8 +65,8 @@ class Welcome extends StatelessWidget {
           ),
           Positioned(
             bottom: 15,
-            left: 0,
-            right: 0,
+            left: 23,
+            right: 23,
             child: Center(
               child: Elevatedbottun(context, Login(), 'Get Started'),
             ),
