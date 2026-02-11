@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:green_mart/Core/Constants/ElevatedBottun.dart';
+import 'package:green_mart/Core/CommonWidgets/ElevatedBottun.dart';
 import 'package:green_mart/Core/Constants/app_image.dart';
 import 'package:green_mart/Core/Styles/colors.dart';
 import 'package:green_mart/Core/Styles/textstyle.dart';
@@ -58,7 +58,7 @@ class Welcome extends StatelessWidget {
                 'Ger your groceries in as fast as one hour',
                 textAlign: TextAlign.center,
                 style: TextStyles.body.copyWith(
-                  color: const Color.fromARGB(255, 203, 203, 203),
+                  color: AppColors.greyColor,
                 ),
               ),
             ),

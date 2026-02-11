@@ -5,11 +5,11 @@ import 'package:green_mart/Core/Constants/app_image.dart';
 import 'package:green_mart/Core/Styles/colors.dart';
 import 'package:green_mart/Core/Styles/textstyle.dart';
 import 'package:green_mart/Features/Number/number.dart';
-import 'package:green_mart/Features/SignUp/signup.dart';
 import 'package:green_mart/Features/Welcome/welcome.dart';
+import 'package:green_mart/Features/login/login.dart';
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+class Sign_Up extends StatelessWidget {
+  const Sign_Up({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,6 @@ class Login extends StatelessWidget {
           icon: Icon(Icons.arrow_back_ios),
         ),
       ),
-
       body: Padding(
         padding: const EdgeInsets.all(22.64),
         child: Center(
@@ -37,12 +36,53 @@ class Login extends StatelessWidget {
                 child: SvgPicture.asset(AppImage.coloerdcarrotsvg),
               ),
               SizedBox(height: 40),
-              Text("Login", style: TextStyles.title),
+              Text("Sign Up", style: TextStyles.title),
               Text(
                 "Enter your credentials to continue",
                 style: TextStyles.caption1.copyWith(color: AppColors.greyColor),
               ),
               SizedBox(height: 30),
+              Text(
+                "Name",
+                style: TextStyles.body.copyWith(
+                  color: AppColors.greyColor,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SizedBox(height: 10),
+
+              TextFormField(
+                decoration: InputDecoration(
+                  // prefixIcon: Icon(Icons.email),
+                  hintText: 'Haidy Hosam El-Dien',
+                  hintStyle: TextStyles.caption1.copyWith(
+                    color: AppColors.greyColor,
+                  ),
+                  fillColor: AppColors.lightGreyColor,
+                  filled: true,
+                  // border: OutlineInputBorder(
+                  //   borderRadius: BorderRadius.circular(20),
+                  //   borderSide: BorderSide.none,
+                  // ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide.none,
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: AppColors.blue),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  errorBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: AppColors.red),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  focusedErrorBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: AppColors.lightred),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
               Text(
                 "Email",
                 style: TextStyles.body.copyWith(
@@ -143,39 +183,34 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-              Elevatedbottun(context, Number(), 'Login'),
+              Elevatedbottun(context, Number(), 'Sign Up'),
               SizedBox(height: 7),
               // Align(alignment : Alignment.center, child: Text("Don't have an account? Sign Up", style: TextStyles.body.copyWith(color: AppColors.greyColor),))
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Don't have an account ? ",
-                    style: TextStyles.body.copyWith(
-                      color: AppColors.greyColor,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 15,
-                    ),
+                    "Already have an account ? ",
+                    style: TextStyles.body.copyWith(color: AppColors.greyColor, fontWeight: FontWeight.w600 , fontSize: 15,),
                   ),
                   TextButton(
-                    style: TextButton.styleFrom(padding: EdgeInsets.zero),
                     onPressed: () => {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Sign_Up()),
+                        MaterialPageRoute(builder: (context) => Login()),
                       ),
                     },
                     child: Text(
-                      'Sign Up',
+                      'Login',
                       style: TextStyles.body.copyWith(
                         color: AppColors.primaryColor,
                         fontWeight: FontWeight.w600,
                         fontSize: 15,
                       ),
                     ),
-                  ),
+                  )
                 ],
-              ),
+              )
             ],
           ),
         ),
