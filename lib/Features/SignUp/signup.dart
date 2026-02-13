@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:green_mart/Core/CommonWidgets/ElevatedBottun.dart';
+import 'package:green_mart/Core/CommonWidgets/custom_pass_form_field.dart';
+import 'package:green_mart/Core/CommonWidgets/custom_text_form_field.dart';
 import 'package:green_mart/Core/Constants/app_image.dart';
 import 'package:green_mart/Core/Styles/colors.dart';
 import 'package:green_mart/Core/Styles/textstyle.dart';
@@ -13,6 +15,8 @@ class Sign_Up extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final formKey2 = GlobalKey<FormState>();
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -24,194 +28,151 @@ class Sign_Up extends StatelessWidget {
           icon: Icon(Icons.arrow_back_ios),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(22.64),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Align(
-                alignment: Alignment.center,
-                child: SvgPicture.asset(AppImage.coloerdcarrotsvg),
-              ),
-              SizedBox(height: 40),
-              Text("Sign Up", style: TextStyles.title),
-              Text(
-                "Enter your credentials to continue",
-                style: TextStyles.caption1.copyWith(color: AppColors.greyColor),
-              ),
-              SizedBox(height: 30),
-              Text(
-                "Name",
-                style: TextStyles.body.copyWith(
-                  color: AppColors.greyColor,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              SizedBox(height: 10),
-
-              TextFormField(
-                decoration: InputDecoration(
-                  // prefixIcon: Icon(Icons.email),
-                  hintText: 'Haidy Hosam El-Dien',
-                  hintStyle: TextStyles.caption1.copyWith(
-                    color: AppColors.greyColor,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(22.64),
+          child: Center(
+            child: Form(
+              key: formKey2,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Align(
+                    alignment: Alignment.center,
+                    child: SvgPicture.asset(AppImage.coloerdcarrotsvg),
                   ),
-                  fillColor: AppColors.lightGreyColor,
-                  filled: true,
-                  // border: OutlineInputBorder(
-                  //   borderRadius: BorderRadius.circular(20),
-                  //   borderSide: BorderSide.none,
-                  // ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                    borderSide: BorderSide.none,
+                  SizedBox(height: 40),
+                  Text("Sign Up", style: TextStyles.title),
+                  Text(
+                    "Enter your credentials to continue",
+                    style: TextStyles.caption1.copyWith(
+                      color: AppColors.greyColor,
+                    ),
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: AppColors.blue),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  errorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: AppColors.red),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  focusedErrorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: AppColors.lightred),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                "Email",
-                style: TextStyles.body.copyWith(
-                  color: AppColors.greyColor,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              SizedBox(height: 10),
-
-              TextFormField(
-                decoration: InputDecoration(
-                  // prefixIcon: Icon(Icons.email),
-                  hintText: 'example@gmail.com',
-                  hintStyle: TextStyles.caption1.copyWith(
-                    color: AppColors.greyColor,
-                  ),
-                  fillColor: AppColors.lightGreyColor,
-                  filled: true,
-                  // border: OutlineInputBorder(
-                  //   borderRadius: BorderRadius.circular(20),
-                  //   borderSide: BorderSide.none,
-                  // ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                    borderSide: BorderSide.none,
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: AppColors.blue),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  errorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: AppColors.red),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  focusedErrorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: AppColors.lightred),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                "Password",
-                style: TextStyles.body.copyWith(
-                  color: AppColors.greyColor,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              SizedBox(height: 10),
-
-              TextFormField(
-                decoration: InputDecoration(
-                  suffixIcon: Icon(Icons.remove_red_eye),
-                  hintText: '************',
-                  hintStyle: TextStyles.caption1.copyWith(
-                    color: AppColors.greyColor,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  fillColor: AppColors.lightGreyColor,
-                  filled: true,
-                  // border: OutlineInputBorder(
-                  //   borderRadius: BorderRadius.circular(20),
-                  //   borderSide: BorderSide.none,
-                  // ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                    borderSide: BorderSide.none,
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: AppColors.blue),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  errorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: AppColors.red),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  focusedErrorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: AppColors.lightred),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-              ),
-              SizedBox(height: 10),
-              Align(
-                alignment: Alignment.centerRight,
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    padding: EdgeInsets.zero,
-                    minimumSize: Size(50, 30),
-                  ),
-                  onPressed: () => {},
-                  child: Text(
-                    'Forget Password ?',
+                  SizedBox(height: 30),
+                  Text(
+                    "Name",
                     style: TextStyles.body.copyWith(
                       color: AppColors.greyColor,
-                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
-                ),
-              ),
-              Elevatedbottun(context, Number(), 'Sign Up'),
-              SizedBox(height: 7),
-              // Align(alignment : Alignment.center, child: Text("Don't have an account? Sign Up", style: TextStyles.body.copyWith(color: AppColors.greyColor),))
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Already have an account ? ",
-                    style: TextStyles.body.copyWith(color: AppColors.greyColor, fontWeight: FontWeight.w600 , fontSize: 15,),
-                  ),
-                  TextButton(
-                    onPressed: () => {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Login()),
-                      ),
+                  SizedBox(height: 10),
+
+                  CustomTextFormField(
+                    hintText: "Enter your name",
+                    posticon: Icon(Icons.person_outline),
+                    keyboardType: TextInputType.name,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter Your Name';
+                      }
+                      return null;
                     },
-                    child: Text(
-                      'Login',
-                      style: TextStyles.body.copyWith(
-                        color: AppColors.primaryColor,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 15,
+                  ),
+                  SizedBox(height: 10),
+
+                  Text(
+                    "Email",
+                    style: TextStyles.body.copyWith(
+                      color: AppColors.greyColor,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+
+                  CustomTextFormField(
+                    hintText: "Enter your email",
+                    posticon: Icon(Icons.email_outlined),
+                    keyboardType: TextInputType.emailAddress,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter Your Email';
+                      } else if (value.contains('@') == false) {
+                        return 'Please enter a valid email';
+                      }
+                      return null;
+                    },
+                  ),
+                  SizedBox(height: 20),
+                  Text(
+                    "Password",
+                    style: TextStyles.body.copyWith(
+                      color: AppColors.greyColor,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+
+                  CustomPassFormField(
+                    hintText: "Enter your password",
+                    posticon: Icon(Icons.lock_outline),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter Your Password';
+                      }
+                      return null;
+                    },
+                  ),
+                  SizedBox(height: 10),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                        padding: EdgeInsets.zero,
+                        minimumSize: Size(50, 30),
+                      ),
+                      onPressed: () => {},
+                      child: Text(
+                        'Forget Password ?',
+                        style: TextStyles.body.copyWith(
+                          color: AppColors.greyColor,
+                          fontSize: 15,
+                        ),
                       ),
                     ),
-                  )
+                  ),
+                  Elevatedbottun(
+                    title: 'Sign Up',
+                    onPressed: () {
+                      if (formKey2.currentState!.validate()) {}
+                    },
+                  ),
+                  SizedBox(height: 7),
+                  // Align(alignment : Alignment.center, child: Text("Don't have an account? Sign Up", style: TextStyles.body.copyWith(color: AppColors.greyColor),))
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Already have an account ? ",
+                        style: TextStyles.body.copyWith(
+                          color: AppColors.greyColor,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 15,
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () => {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Login()),
+                          ),
+                        },
+                        child: Text(
+                          'Login',
+                          style: TextStyles.body.copyWith(
+                            color: AppColors.primaryColor,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
-              )
-            ],
+              ),
+            ),
           ),
         ),
       ),

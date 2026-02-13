@@ -68,7 +68,12 @@ class Welcome extends StatelessWidget {
             left: 23,
             right: 23,
             child: Center(
-              child: Elevatedbottun(context, Login(), 'Get Started'),
+              child: Elevatedbottun(title: 'Get Started', onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Login()),
+                );
+              }),
             ),
           ),
         ],
