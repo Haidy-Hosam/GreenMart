@@ -106,7 +106,6 @@ class _VerificationState extends State<Verification> {
             Center(
               child: Pinput(
                 length: 5,
-                defaultPinTheme: defaultPinTheme,
                 onCompleted: (pin) {
                 },
               ),
