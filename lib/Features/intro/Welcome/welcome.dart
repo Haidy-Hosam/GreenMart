@@ -4,7 +4,7 @@ import 'package:green_mart/Core/CommonWidgets/ElevatedBottun.dart';
 import 'package:green_mart/Core/Constants/app_image.dart';
 import 'package:green_mart/Core/Styles/colors.dart';
 import 'package:green_mart/Core/Styles/textstyle.dart';
-import 'package:green_mart/Features/login/login.dart';
+import 'package:green_mart/Features/auth/login/login.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});

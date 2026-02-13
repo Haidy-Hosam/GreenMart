@@ -6,25 +6,20 @@ import 'package:green_mart/Core/CommonWidgets/custom_text_form_field.dart';
 import 'package:green_mart/Core/Constants/app_image.dart';
 import 'package:green_mart/Core/Styles/colors.dart';
 import 'package:green_mart/Core/Styles/textstyle.dart';
-import 'package:green_mart/Features/Number/number.dart';
-import 'package:green_mart/Features/SignUp/signup.dart';
-import 'package:green_mart/Features/Welcome/welcome.dart';
+import 'package:green_mart/Features/auth/Number/number.dart';
+import 'package:green_mart/Features/intro/Welcome/welcome.dart';
+import 'package:green_mart/Features/auth/login/login.dart';
 
-// to handle input validations :
-// 1) wrap with Form widget
-// 2) create formKey and pass it to Form widget
-// 3) add validators for each field
-// 4) check if formKey.currentState!.validate() is true when onPressed is called
-
-
-class Login extends StatelessWidget {
-  const Login({super.key});
+class Sign_Up extends StatelessWidget {
+  const Sign_Up({super.key});
 
   @override
   Widget build(BuildContext context) {
-  final formKey = GlobalKey<FormState>();
+    final formKey2 = GlobalKey<FormState>();
+
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: AppColors.backgroundColor,
         leading: IconButton(
           onPressed: () => Navigator.pushAndRemoveUntil(
             context,
@@ -34,13 +29,12 @@ class Login extends StatelessWidget {
           icon: Icon(Icons.arrow_back_ios),
         ),
       ),
-
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(22.64),
           child: Center(
             child: Form(
-              key: formKey,
+              key: formKey2,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,7 +44,7 @@ class Login extends StatelessWidget {
                     child: SvgPicture.asset(AppImage.coloerdcarrotsvg),
                   ),
                   SizedBox(height: 40),
-                  Text("Login", style: TextStyles.title),
+                  Text("Sign Up", style: TextStyles.title),
                   Text(
                     "Enter your credentials to continue",
                     style: TextStyles.caption1.copyWith(
@@ -59,6 +53,28 @@ class Login extends StatelessWidget {
                   ),
                   SizedBox(height: 30),
                   Text(
+                    "Name",
+                    style: TextStyles.body.copyWith(
+                      color: AppColors.greyColor,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+
+                  CustomTextFormField(
+                    hintText: "Enter your name",
+                    posticon: Icon(Icons.person_outline),
+                    keyboardType: TextInputType.name,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter Your Name';
+                      }
+                      return null;
+                    },
+                  ),
+                  SizedBox(height: 10),
+
+                  Text(
                     "Email",
                     style: TextStyles.body.copyWith(
                       color: AppColors.greyColor,
@@ -66,7 +82,7 @@ class Login extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10),
-              
+
                   CustomTextFormField(
                     hintText: "Enter your email",
                     posticon: Icon(Icons.email_outlined),
@@ -74,10 +90,9 @@ class Login extends StatelessWidget {
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Please enter Your Email';
-                       }
-                       else if(value.contains('@') == false){
+                      } else if (value.contains('@') == false) {
                         return 'Please enter a valid email';
-                       }
+                      }
                       return null;
                     },
                   ),
@@ -90,18 +105,17 @@ class Login extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10),
-              
+
                   CustomPassFormField(
                     hintText: "Enter your password",
                     posticon: Icon(Icons.lock_outline),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Please enter Your Password';
-                       }
+                      }
                       return null;
                     },
                   ),
-              
                   SizedBox(height: 10),
                   Align(
                     alignment: Alignment.centerRight,
@@ -120,17 +134,19 @@ class Login extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Elevatedbottun(title: 'Login', onPressed: () {
-                    if (formKey.currentState!.validate()) {
-                    }
-                  }),
+                  Elevatedbottun(
+                    title: 'Sign Up',
+                    onPressed: () {
+                      if (formKey2.currentState!.validate()) {}
+                    },
+                  ),
                   SizedBox(height: 7),
                   // Align(alignment : Alignment.center, child: Text("Don't have an account? Sign Up", style: TextStyles.body.copyWith(color: AppColors.greyColor),))
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Don't have an account ? ",
+                        "Already have an account ? ",
                         style: TextStyles.body.copyWith(
                           color: AppColors.greyColor,
                           fontWeight: FontWeight.w600,
@@ -138,15 +154,14 @@ class Login extends StatelessWidget {
                         ),
                       ),
                       TextButton(
-                        style: TextButton.styleFrom(padding: EdgeInsets.zero),
                         onPressed: () => {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Sign_Up()),
+                            MaterialPageRoute(builder: (context) => Login()),
                           ),
                         },
                         child: Text(
-                          'Sign Up',
+                          'Login',
                           style: TextStyles.body.copyWith(
                             color: AppColors.primaryColor,
                             fontWeight: FontWeight.w600,

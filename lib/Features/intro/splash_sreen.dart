@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:green_mart/Core/Constants/app_image.dart';
 import 'package:green_mart/Core/HelperMethods/navigations.dart';
-import 'package:green_mart/Features/Welcome/welcome.dart';
+import 'package:green_mart/Features/intro/Welcome/welcome.dart';
 import '../../Core/Styles/colors.dart';
 
 class SplashSreen extends StatefulWidget {
