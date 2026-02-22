@@ -22,7 +22,7 @@ List<ProductModel> offers = [
     id: '1',
     categoryId: '1',
     image:
-        'https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg',
+        'https://www.pngall.com/wp-content/uploads/2016/04/Apple-Fruit-PNG.png',
     name: 'Apple',
     price: 10.0,
     quantityForPrice: "1kg",

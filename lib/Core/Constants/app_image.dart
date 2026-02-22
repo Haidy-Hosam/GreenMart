@@ -13,4 +13,10 @@ class AppImage {
   static const String storesvg = 'assets/icons/store.svg';
   static const String user = 'assets/icons/user.svg';
   static const String searchsvg = 'assets/icons/search.svg';
+  static const String dairyEggs = 'assets/images/Dairy & Eggs.png';
+  static const String bakerySnacks = 'assets/images/Bakery & Snacks.png';
+  static const String meatFish = 'assets/images/Meat & Fish.png';
+  static const String beverages = 'assets/images/Beverages.png';
+  static const String freshFruits = 'assets/images/Fresh Fruits.png';
+  static const String cookingOil = 'assets/images/Cooking Oil.png';
 }

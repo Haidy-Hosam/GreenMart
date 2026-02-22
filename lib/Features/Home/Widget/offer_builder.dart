@@ -45,7 +45,7 @@ class OfferBuilder extends StatelessWidget {
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
-              return itemcard(product: offers[index]);
+              return ItemCard(product: offers[index]);
             },
             separatorBuilder: (context, index) => SizedBox(width: 12),
             itemCount: offers.length,

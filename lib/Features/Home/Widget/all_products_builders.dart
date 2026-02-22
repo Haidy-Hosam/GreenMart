@@ -41,17 +41,21 @@ class AllProductsBuilders extends StatelessWidget {
           physics: NeverScrollableScrollPhysics(), // اقفل الاسكرول
           shrinkWrap: true,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
+            crossAxisCount: 2, // كل صف فيه 2 كارد
             crossAxisSpacing: 10, // العرض
+            // المسافة الأفقية بين الأعمدة
+            //(بين الكروت جنب بعض)
             mainAxisSpacing: 10,
             // mainAxisExtent: 250, // الارتفاع
             childAspectRatio:
                 0.7, // نسبة العرض إلى الارتفاع من الاخر تخليه ريسبونسف مع الشاشه
             // و عشان كده علقت الmainAxisExtent .. بحيث ان حجم الكارد ميبقاش ثابت و يتغير حسب حجم الشاشه
+            //             الارتفاع أكبر من العرض
+            // فالكارد طالع طويل شوية
           ),
           itemCount: allProducts.length,
           itemBuilder: (context, index) {
-            return itemcard(product: allProducts[index]);
+            return ItemCard(product: allProducts[index]);
           },
         ),
       ],

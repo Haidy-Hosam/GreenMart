@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:green_mart/Core/Constants/app_image.dart';
 import 'package:green_mart/Core/Styles/colors.dart';
 import 'package:green_mart/Core/Styles/textstyle.dart';
 import 'package:green_mart/Features/Home/data/ProductData.dart';
 
-class itemcard extends StatelessWidget {
-  const itemcard({super.key, required this.product});
+class ItemCard extends StatelessWidget {
+  const ItemCard({super.key, required this.product});
   final ProductModel product;
   @override
   Widget build(BuildContext context) {

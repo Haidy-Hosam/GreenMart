@@ -45,7 +45,7 @@ class BestSilling extends StatelessWidget {
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
-              return itemcard(product: bestSelling[index]);
+              return ItemCard(product: bestSelling[index]);
             },
             separatorBuilder: (context, index) => SizedBox(width: 12),
             itemCount: bestSelling.length,
