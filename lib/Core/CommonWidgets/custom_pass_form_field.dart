@@ -48,7 +48,6 @@ class _CustomPassFormFieldState extends State<CustomPassFormField> {
             ),
       ),
             validator: widget.validator,
-
     );
   }
 }

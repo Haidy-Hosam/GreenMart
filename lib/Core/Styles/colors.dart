@@ -10,4 +10,5 @@ class AppColors {
   static const Color red = Color.fromARGB(255, 153, 15, 15);
   static const Color lightred = Color.fromARGB(255, 241, 68, 68);
   static const Color Tango = Color.fromARGB(255, 243, 122, 32);
+  static const Color borderColor = Color.fromARGB(255, 226, 226, 226);
 }

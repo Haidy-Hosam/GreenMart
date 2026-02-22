@@ -63,7 +63,7 @@ class Sign_Up extends StatelessWidget {
 
                   CustomTextFormField(
                     hintText: "Enter your name",
-                    posticon: Icon(Icons.person_outline),
+                    prefixIcon: Icon(Icons.person_outline),
                     keyboardType: TextInputType.name,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -85,7 +85,7 @@ class Sign_Up extends StatelessWidget {
 
                   CustomTextFormField(
                     hintText: "Enter your email",
-                    posticon: Icon(Icons.email_outlined),
+                    prefixIcon: Icon(Icons.email_outlined),
                     keyboardType: TextInputType.emailAddress,
                     validator: (value) {
                       if (value == null || value.isEmpty) {

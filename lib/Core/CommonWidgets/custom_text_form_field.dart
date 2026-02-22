@@ -4,16 +4,18 @@ class CustomTextFormField extends StatefulWidget {
   const CustomTextFormField({
     super.key,
     this.hintText,
-    this.posticon,
+    this.prefixIcon,
     this.suffixicon,
     this.keyboardType,
     this.validator,
+    this.enabled = true,
   });
   final String? hintText;
-  final Widget? posticon;
+  final Widget? prefixIcon;
   final Widget? suffixicon;
   final TextInputType? keyboardType;
   final String? Function(String?)? validator;
+  final bool enabled;
 
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
@@ -27,9 +29,10 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       decoration: InputDecoration(
         hintText: widget.hintText,
         suffixIcon: widget.suffixicon,
-        prefixIcon: widget.posticon,
+        prefixIcon: widget.prefixIcon,
       ),
       validator: widget.validator,
+      enabled: widget.enabled,
       // validator: (value) {
       //   if (value?.isEmpty == true) {
       //     return 'Please enter Your Email';

@@ -70,7 +70,7 @@ class Login extends StatelessWidget {
               
                   CustomTextFormField(
                     hintText: "Enter your email",
-                    posticon: Icon(Icons.email_outlined),
+                    prefixIcon: Icon(Icons.email_outlined),
                     keyboardType: TextInputType.emailAddress,
                     validator: (value) {
                       if (value == null || value.isEmpty) {

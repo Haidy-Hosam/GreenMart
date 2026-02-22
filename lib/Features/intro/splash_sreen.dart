@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:green_mart/Core/Constants/app_image.dart';
 import 'package:green_mart/Core/HelperMethods/navigations.dart';
 import 'package:green_mart/Features/intro/Welcome/welcome.dart';
+import 'package:green_mart/Features/main/main_screen.dart';
 import '../../Core/Styles/colors.dart';
 
 class SplashSreen extends StatefulWidget {
@@ -16,7 +17,8 @@ class _SplashSreenState extends State<SplashSreen> {
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-      PushReplasment(context, Welcome());
+      // PushReplasment(context, Welcome());
+      Pushto(context, MainAppScreen());
     });
   }
 
