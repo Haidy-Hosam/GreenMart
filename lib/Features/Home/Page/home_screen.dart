@@ -7,7 +7,7 @@ import 'package:green_mart/Core/CommonWidgets/custom_text_form_field.dart';
 import 'package:green_mart/Core/Constants/app_image.dart';
 import 'package:green_mart/Features/Home/Widget/item_card.dart';
 import 'package:green_mart/Features/Home/Widget/offer_builder.dart';
-import 'package:green_mart/Features/Search/search_screen.dart';
+import 'package:green_mart/Features/Search/Pages/search_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -41,11 +41,16 @@ class HomeScreen extends StatelessWidget {
                   onTap: () {
                     Pushto(context, SearchScreen());
                   },  
-                  child: CustomTextFormField(
-                    prefixIcon: Icon(Icons.search),
-                    hintText: 'Search Store',
-                    enabled: false, // عشان لما تضغط عليها متفتحش الكيبورد
-                      // هنا المفروض تفتح صفحة البحث
+                  child: Hero(
+                    tag: 'search',
+                    child: Material(
+                      child: CustomTextFormField(
+                        prefixIcon: Icon(Icons.search),
+                        hintText: 'Search Store',
+                        enabled: false, // عشان لما تضغط عليها متفتحش الكيبورد
+                          // هنا المفروض تفتح صفحة البحث
+                      ),
+                    ),
                   ),
                 ),
                 SizedBox(height: 12),

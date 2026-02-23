@@ -9,6 +9,7 @@ class CustomTextFormField extends StatefulWidget {
     this.keyboardType,
     this.validator,
     this.enabled = true,
+    this.onChanged,
   });
   final String? hintText;
   final Widget? prefixIcon;
@@ -16,6 +17,7 @@ class CustomTextFormField extends StatefulWidget {
   final TextInputType? keyboardType;
   final String? Function(String?)? validator;
   final bool enabled;
+  final Function(String)? onChanged;
 
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
@@ -33,6 +35,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       ),
       validator: widget.validator,
       enabled: widget.enabled,
+      onChanged: widget.onChanged,
       // validator: (value) {
       //   if (value?.isEmpty == true) {
       //     return 'Please enter Your Email';
