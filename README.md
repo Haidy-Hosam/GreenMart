@@ -12,4 +12,5 @@
   <img src="Screenshots/Resend Verfication.png" width="200"/>
   <img src="Screenshots/HomeScreen.png" width="200"/>
   <img src="Screenshots/ExploreScreen.png" width="200"/>
+  <img src="Screenshots/SearchScreen.png" width="200"/>
 </p>
