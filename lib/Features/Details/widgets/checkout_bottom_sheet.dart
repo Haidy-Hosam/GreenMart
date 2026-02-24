@@ -6,10 +6,14 @@ import 'package:green_mart/Core/Styles/textstyle.dart';
 void showCheckoutBottomSheet(BuildContext context) {
   showModalBottomSheet(
     context: context,
-    enableDrag: false,
-    isDismissible: false,
-    isScrollControlled: true,
-    useSafeArea: true,
+    enableDrag:
+        false, // لتحت بإيده عشان يقفله bottom sheet المستخدم مش هيقدر يسحب الـ
+    isDismissible:
+        false, // خالص اصلاsheet  المستخدم مش هيقدر يقفله لما يضغط بره ال
+    isScrollControlled:
+        true, // يقدر ياخد ارتفاع كبير مش نص الشاشه مثلا بس ف باالتالي ارتفاعه يكون حر bottom sheet اخلي ال
+    // و ساعتها هحتاج معاه min  خدي بالك بقي عشان ياخد علي قد الكومنتنت ده بس
+    useSafeArea: true, // احترم السيف اريا بتاعتي يا ولد
     backgroundColor: AppColors.backgroundColor,
     builder: (context) {
       return const CheckoutBottomSheet();
@@ -23,22 +27,23 @@ class CheckoutBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopScope(
+      // اقفل الباك بتاعة التليفون
       canPop: false,
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisSize: MainAxisSize.min, // Column الارتفاع علي قد ال
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
                 Text('Checkout', style: TextStyles.subtitle),
-                const Spacer(),
+                Spacer(),
                 IconButton(
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  icon: const Icon(Icons.close),
+                  icon: Icon(Icons.close),
                 ),
               ],
             ),
@@ -123,8 +128,8 @@ class CheckoutBottomSheet extends StatelessWidget {
             const Divider(),
             const SizedBox(height: 10),
 
-             RichText(
-              text: TextSpan(
+            RichText(
+              text: const TextSpan(
                 style: TextStyle(color: Colors.grey),
                 children: [
                   TextSpan(text: "By placing an order you agree to our "),
