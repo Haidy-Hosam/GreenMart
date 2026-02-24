@@ -7,6 +7,7 @@ import 'package:green_mart/Features/Explore/Page/explore_screen.dart';
 import 'package:green_mart/Features/Favorites/favorites_screen.dart';
 import 'package:green_mart/Features/Home/Page/home_screen.dart';
 import 'package:green_mart/Features/My%20Cart/mycart_screen.dart';
+import 'package:green_mart/Features/Profile/profile_screen.dart';
 
 class MainAppScreen extends StatefulWidget {
   const MainAppScreen({super.key});
@@ -21,7 +22,7 @@ final List<Widget> _screens = [
   ExploreScreen(),
   MyCartScreen(),
   FavoritesScreen(),
-  Center(child: Text('Profile Screen')),
+  ProfileScreen(),
 ];
   @override
   Widget build(BuildContext context) {
