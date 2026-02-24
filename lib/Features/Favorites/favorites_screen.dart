@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:green_mart/Core/CommonWidgets/ElevatedBottun.dart';
 import 'package:green_mart/Features/Home/data/ProductData.dart';
-import 'package:green_mart/Core/CommonWidgets/price_with_counter.dart';
 
-class MyCartScreen extends StatelessWidget {
-  const MyCartScreen({super.key});
+class FavoritesScreen extends StatelessWidget {
+  const FavoritesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final products = allProducts.take(4).toList(); 
+    final products = allProducts.take(5).toList();
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("My Cart"),
+        title: const Text(
+          "Favorites",
+          style: TextStyle(fontWeight: FontWeight.w800),
+        ),
         centerTitle: true,
       ),
       body: Column(
@@ -21,7 +23,7 @@ class MyCartScreen extends StatelessWidget {
             child: ListView.separated(
               padding: const EdgeInsets.all(16),
               itemCount: products.length,
-              separatorBuilder: (_, _) =>  Divider(height: 30),
+              separatorBuilder: (_, _) => Divider(height: 30),
               itemBuilder: (context, index) {
                 final product = products[index];
 
@@ -53,26 +55,27 @@ class MyCartScreen extends StatelessWidget {
                             style: const TextStyle(color: Colors.grey),
                           ),
                           const SizedBox(height: 10),
-
-                          PriceWithCounter(model: product,)
                         ],
                       ),
                     ),
 
                     const SizedBox(width: 10),
-                    const Icon(Icons.close, color: Colors.grey)
+                    Text(
+                      '\$${product.price}',
+                      style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0) , fontWeight: FontWeight.w900),
+                    ),
+                    const Icon(Icons.arrow_forward_ios_outlined, color: Colors.grey),
                   ],
                 );
               },
             ),
           ),
           Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20 , vertical: 10),
-            child: Elevatedbottun(title: 'Go to Checkout' , onPressed: () => {}),
-          )
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Elevatedbottun(title: 'Add All To Cart', onPressed: () => {}),
+          ),
         ],
       ),
     );
   }
 }
-

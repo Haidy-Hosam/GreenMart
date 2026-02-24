@@ -4,6 +4,7 @@ import 'package:green_mart/Core/CommonWidgets/custom_svg_picture.dart';
 import 'package:green_mart/Core/Constants/app_image.dart';
 import 'package:green_mart/Core/Styles/colors.dart';
 import 'package:green_mart/Features/Explore/Page/explore_screen.dart';
+import 'package:green_mart/Features/Favorites/favorites_screen.dart';
 import 'package:green_mart/Features/Home/Page/home_screen.dart';
 import 'package:green_mart/Features/My%20Cart/mycart_screen.dart';
 
@@ -19,7 +20,7 @@ final List<Widget> _screens = [
   HomeScreen(),
   ExploreScreen(),
   MyCartScreen(),
-  Center(child: Text('Favorite Screen')),
+  FavoritesScreen(),
   Center(child: Text('Profile Screen')),
 ];
   @override
