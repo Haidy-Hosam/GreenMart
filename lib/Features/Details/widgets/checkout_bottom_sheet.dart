@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:green_mart/Core/CommonWidgets/ElevatedBottun.dart';
+import 'package:green_mart/Core/HelperMethods/navigations.dart';
 import 'package:green_mart/Core/Styles/colors.dart';
 import 'package:green_mart/Core/Styles/textstyle.dart';
+import 'package:green_mart/Features/Details/Page/orderaccepted_Screen.dart';
 
 void showCheckoutBottomSheet(BuildContext context) {
   showModalBottomSheet(
@@ -59,10 +61,7 @@ class CheckoutBottomSheet extends StatelessWidget {
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: const [
-                  Text(
-                    "Select Method",
-                    style: TextStyle(color: Colors.grey),
-                  ),
+                  Text("Select Method", style: TextStyle(color: Colors.grey)),
                   SizedBox(width: 5),
                   Icon(Icons.arrow_forward_ios, size: 16),
                 ],
@@ -101,10 +100,7 @@ class CheckoutBottomSheet extends StatelessWidget {
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: const [
-                  Text(
-                    "Pick discount",
-                    style: TextStyle(color: Colors.grey),
-                  ),
+                  Text("Pick discount", style: TextStyle(color: Colors.grey)),
                   SizedBox(width: 5),
                   Icon(Icons.arrow_forward_ios, size: 16),
                 ],
@@ -148,7 +144,9 @@ class CheckoutBottomSheet extends StatelessWidget {
 
             Elevatedbottun(
               title: 'Place Order',
-              onPressed: () {},
+              onPressed: () {
+                Pushto(context, OrderacceptedScreen());
+              },
             ),
           ],
         ),

@@ -20,4 +20,5 @@ class AppImage {
   static const String beverages = 'assets/images/Beverages.png';
   static const String freshFruits = 'assets/images/Fresh Fruits.png';
   static const String cookingOil = 'assets/images/Cooking Oil.png';
+  static const String orderaccepted = 'assets/images/orderaccepted.png';
 }
