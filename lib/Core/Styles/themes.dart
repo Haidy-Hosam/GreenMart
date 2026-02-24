@@ -5,7 +5,8 @@ import 'package:green_mart/Core/Styles/textstyle.dart';
 
 class AppThemes {
   static ThemeData get lightTheme => ThemeData(
-
+    dividerColor: Colors.transparent,
+    dividerTheme: DividerThemeData(color: AppColors.borderColor),
         fontFamily: AppFonts.poppins,
         scaffoldBackgroundColor: AppColors.backgroundColor,
         textButtonTheme: TextButtonThemeData(
