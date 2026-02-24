@@ -15,4 +15,8 @@
   <img src="Screenshots/SearchScreen.png" width="200"/>
   <img src="Screenshots/DetailsScreen.png" width="200"/>
   <img src="Screenshots/CheckOut_SheetScreen.png" width="200"/>
+  <img src="Screenshots/orderaccepted_Screen.png" width="200"/>
+  <img src="Screenshots/Favorite_Screen.png" width="200"/>
+  <img src="Screenshots/MyCart_Screen.png" width="200"/>
+  <img src="Screenshots/Profile_Screen.png" width="200"/>
 </p>
