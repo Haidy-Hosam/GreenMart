@@ -13,4 +13,6 @@
   <img src="Screenshots/HomeScreen.png" width="200"/>
   <img src="Screenshots/ExploreScreen.png" width="200"/>
   <img src="Screenshots/SearchScreen.png" width="200"/>
+  <img src="Screenshots/DetailsScreen.png" width="200"/>
+  <img src="Screenshots/CheckOut_SheetScreen.png" width="200"/>
 </p>
