@@ -5,7 +5,6 @@ import 'package:green_mart/Features/Home/Widget/best_silling_builder.dart';
 import 'package:green_mart/Core/CommonWidgets/custom_svg_picture.dart';
 import 'package:green_mart/Core/CommonWidgets/custom_text_form_field.dart';
 import 'package:green_mart/Core/Constants/app_image.dart';
-import 'package:green_mart/Features/Home/Widget/item_card.dart';
 import 'package:green_mart/Features/Home/Widget/offer_builder.dart';
 import 'package:green_mart/Features/Search/Pages/search_screen.dart';
 

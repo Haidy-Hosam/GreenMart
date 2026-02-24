@@ -3,7 +3,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:green_mart/Core/CommonWidgets/ElevatedBottun.dart';
 import 'package:green_mart/Core/Styles/colors.dart';
 import 'package:green_mart/Features/Details/widgets/checkout_bottom_sheet.dart';
-import 'package:green_mart/Features/Details/widgets/price_with_counter.dart';
+import 'package:green_mart/Core/CommonWidgets/price_with_counter.dart';
 import 'package:green_mart/Features/Home/data/ProductData.dart';
 
 class DetailsScreen extends StatelessWidget {
