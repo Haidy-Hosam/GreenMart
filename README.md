@@ -25,22 +25,11 @@ Built with **Flutter** (SDK: ^3.10.4).
 ## 📱 Screenshots
 
 <p align="center">
-  <img src="Screenshots/splash_srceen.png" width="200"/>
-  <img src="Screenshots/welcome_screen.png" width="200"/>
-  <img src="Screenshots/Login.png" width="200"/>
-  <img src="Screenshots/Sign Up.png" width="200"/>
-  <img src="Screenshots/Number.png" width="200"/>
-  <img src="Screenshots/Verfication.png" width="200"/>
-  <img src="Screenshots/Resend Verfication.png" width="200"/>
-  <img src="Screenshots/HomeScreen.png" width="200"/>
-  <img src="Screenshots/ExploreScreen.png" width="200"/>
-  <img src="Screenshots/SearchScreen.png" width="200"/>
-  <img src="Screenshots/DetailsScreen.png" width="200"/>
-  <img src="Screenshots/CheckOut_SheetScreen.png" width="200"/>
-  <img src="Screenshots/orderaccepted_Screen.png" width="200"/>
-  <img src="Screenshots/Favorite_Screen.png" width="200"/>
-  <img src="Screenshots/MyCart_Screen.png" width="200"/>
-  <img src="Screenshots/Profile_Screen.png" width="200"/>
+  <img src="assets/Mockup/1.png" width="400"/>
+  <img src="assets/Mockup/2.png" width="400"/>
+  <img src="assets/Mockup/3.png" width="400"/>
+  <img src="assets/Mockup/4.png" width="400"/>
+  <img src="assets/Mockup/5.png" width="400"/>
 </p>
 
 ## 🚀 Getting Started
